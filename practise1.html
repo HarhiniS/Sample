@@ -1,0 +1,34 @@
+<html>
+<head><title>OTP</title></head>
+<body>
+PHONE NUMBER:<input type='text' id='phone number' value='' onblur='validation()' maxlength=10><br><br>
+OTP :<input type='text' id='otp' disabled value=''>
+
+<script>
+
+function validation()
+{
+var num=document.getElementById('phone number').value;
+
+if(num.length==10)
+{
+
+	if(isNaN(num))  
+	{
+		alert('Enter valid mobile number')
+	}
+	else
+	{
+		alert('An OTP will be sent to the number '+num[0]+num[1]+'******'+num[8]+num[9])
+		document.getElementById('otp').disabled=false;
+	}
+
+}
+else
+{
+	alert('Enter valid mobile number')
+}
+}
+</script>
+</body>
+</html>
